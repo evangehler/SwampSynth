@@ -13,6 +13,7 @@ Beginning of a Juno-106 inspired monosynth for UF AES
 3. Open a PowerShell terminal in VS Code
 4. Run:
 ```powershell
+mkdir build
 cd build
 cmake -G "Ninja" ..
 cmake --build .
@@ -20,7 +21,7 @@ cmake --build .
 5. The `.uf2` file will be in `build/SwampSynth.uf2`
 
 ### Quick Build & Flash
-- Press `Ctrl+Shift+B` to build and flash in one step (Pico must be in BOOTSEL mode) - nifty!
+- Press `Ctrl+Shift+B` to build and flash in one step - nifty!
 
 ### Manual Flashing
 1. Hold BOOTSEL on your Pico and plug it in
