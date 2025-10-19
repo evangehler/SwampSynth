@@ -1,2 +1,33 @@
-Juno 106 inspired PCB monosynth for UF AES club!
-More to come!
+# SwampSynth
+Beginning of a Juno-106 inspired monosynth for UF AES
+
+## Installation / Build
+
+### Prereqs
+- [VS Code](https://code.visualstudio.com/)
+- [Raspberry Pi Pico VS Code Extension](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico)
+
+### Build Steps
+1. Clone this repo
+2. Open the `src` folder in VS Code (not the root folder!)
+3. Open a PowerShell terminal in VS Code
+4. Run:
+```powershell
+cd build
+cmake -G "Ninja" ..
+cmake --build .
+```
+5. The `.uf2` file will be in `build/SwampSynth.uf2`
+
+### Quick Build & Flash
+- Press `Ctrl+Shift+B` to build and flash in one step (Pico must be in BOOTSEL mode) - nifty!
+
+### Manual Flashing
+1. Hold BOOTSEL on your Pico and plug it in
+2. Drag `SwampSynth.uf2` onto the Pico drive
+
+### Notes:
+- Clock output: GPIO 13
+- CV output: GPIO 14
+
+### More to come!
