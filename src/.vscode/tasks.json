@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build and Flash SwampSynth",
+            "label": "Build and Flash SwampThing",
             "type": "shell",
-            "command": "cmake --build build && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot -f -u && sleep 2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" load build/SwampSynth.uf2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot",
+            "command": "cmake --build build && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot -f -u && sleep 2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" load build/SwampThing.uf2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -18,13 +18,13 @@
             },
             "problemMatcher": [],
             "windows": {
-                "command": "cmake --build build && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot -f -u && sleep 2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" load build/SwampSynth.uf2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot"
+                "command": "cmake --build build && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot -f -u && sleep 2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" load build/SwampThing.uf2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot"
             },
             "osx": {
-                "command": "cmake --build build && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot -f -u && sleep 2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" load build/SwampSynth.uf2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot"
+                "command": "cmake --build build && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot -f -u && sleep 2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" load build/SwampThing.uf2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot"
             },
             "linux": {
-                "command": "cmake --build build && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot -f -u && sleep 2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" load build/SwampSynth.uf2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot"
+                "command": "cmake --build build && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot -f -u && sleep 2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" load build/SwampThing.uf2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot"
             }
         },
         {

@@ -28,32 +28,32 @@ set(PICO_BOARD pico CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(SwampSynth C CXX ASM)
+project(SwampThing C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(SwampSynth SwampSynth.c )
+add_executable(SwampThing SwampThing.c )
 
-pico_set_program_name(SwampSynth "SwampSynth")
-pico_set_program_version(SwampSynth "0.1")
+pico_set_program_name(SwampThing "SwampThing")
+pico_set_program_version(SwampThing "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(SwampSynth 1)
-pico_enable_stdio_usb(SwampSynth 1)
+pico_enable_stdio_uart(SwampThing 1)
+pico_enable_stdio_usb(SwampThing 1)
 
 # Add the standard library to the build
-target_link_libraries(SwampSynth
+target_link_libraries(SwampThing
     pico_stdlib
     hardware_pwm        # for clock + CV PWM outputs
     hardware_gpio       # for manual toggling
 )
 
 # Add the standard include files to the build
-target_include_directories(SwampSynth PRIVATE
+target_include_directories(SwampThing PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
-pico_add_extra_outputs(SwampSynth)
+pico_add_extra_outputs(SwampThing)

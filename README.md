@@ -1,8 +1,8 @@
-# SwampSynth
+# SwampThing
 Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberry Pi Pico Microcontroller
 
 ## Component Diagram:
-![Component Diagram](img/component_diagram.png "a title")
+![Component Diagram](img/component_diagram.png "Component Diagram")
 
 ## Installation / Build
 
@@ -21,14 +21,14 @@ cd build
 cmake -G "Ninja" ..
 cmake --build .
 ```
-5. The `.uf2` file will be in `build/SwampSynth.uf2`
+5. The `.uf2` file will be in `build/SwampThing.uf2`
 
 ### Quick Build & Flash
 - Press `Ctrl+Shift+B` to build and flash in one step - nifty!
 
 ### Manual Flashing
 1. Hold BOOTSEL on your Pico and plug it in
-2. Drag `SwampSynth.uf2` onto the Pico drive
+2. Drag `SwampThing.uf2` onto the Pico drive
 
 ### Notes:
 - Clock output: GPIO 13
