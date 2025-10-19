@@ -1,30 +1,37 @@
 {
     "version": "2.0.0",
     "tasks": [
-
-            {
-      "label": "Build and Flash SwampSynth",
-      "type": "shell",
-     "command": "cmake --build build && \"C:\\Users\\evang\\.pico-sdk\\picotool\\2.2.0-a4\\picotool\\picotool.exe\" reboot -f -u && sleep 2 && \"C:\\Users\\evang\\.pico-sdk\\picotool\\2.2.0-a4\\picotool\\picotool.exe\" load build/SwampSynth.uf2 && \"C:\\Users\\evang\\.pico-sdk\\picotool\\2.2.0-a4\\picotool\\picotool.exe\" reboot",
-
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": []
-    },
+        {
+            "label": "Build and Flash SwampSynth",
+            "type": "shell",
+            "command": "cmake --build build && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot -f -u && sleep 2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" load build/SwampSynth.uf2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "windows": {
+                "command": "cmake --build build && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot -f -u && sleep 2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" load build/SwampSynth.uf2 && \"${env:USERPROFILE}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool.exe\" reboot"
+            },
+            "osx": {
+                "command": "cmake --build build && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot -f -u && sleep 2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" load build/SwampSynth.uf2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot"
+            },
+            "linux": {
+                "command": "cmake --build build && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot -f -u && sleep 2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" load build/SwampSynth.uf2 && \"${env:HOME}/.pico-sdk/picotool/2.2.0-a4/picotool/picotool\" reboot"
+            }
+        },
         {
             "label": "Compile Project",
             "type": "process",
             "isBuildCommand": true,
-            "command": "${userHome}/.pico-sdk/ninja/v1.12.1/ninja",
+            "command": "${env:HOME}/.pico-sdk/ninja/v1.12.1/ninja",
             "args": ["-C", "${workspaceFolder}/build"],
             "group": "build",
             "presentation": {
@@ -57,10 +64,10 @@
         {
             "label": "Flash",
             "type": "process",
-            "command": "${userHome}/.pico-sdk/openocd/0.12.0+dev/openocd.exe",
+            "command": "${env:HOME}/.pico-sdk/openocd/0.12.0+dev/openocd",
             "args": [
                 "-s",
-                "${userHome}/.pico-sdk/openocd/0.12.0+dev/scripts",
+                "${env:HOME}/.pico-sdk/openocd/0.12.0+dev/scripts",
                 "-f",
                 "interface/cmsis-dap.cfg",
                 "-f",
@@ -70,16 +77,16 @@
             ],
             "problemMatcher": [],
             "windows": {
-                "command": "${env:USERPROFILE}/.pico-sdk/openocd/0.12.0+dev/openocd.exe",
+                "command": "${env:USERPROFILE}/.pico-sdk/openocd/0.12.0+dev/openocd.exe"
             }
         },
         {
             "label": "Rescue Reset",
             "type": "process",
-            "command": "${userHome}/.pico-sdk/openocd/0.12.0+dev/openocd.exe",
+            "command": "${env:HOME}/.pico-sdk/openocd/0.12.0+dev/openocd",
             "args": [
                 "-s",
-                "${userHome}/.pico-sdk/openocd/0.12.0+dev/scripts",
+                "${env:HOME}/.pico-sdk/openocd/0.12.0+dev/scripts",
                 "-f",
                 "interface/cmsis-dap.cfg",
                 "-f",
@@ -89,16 +96,16 @@
             ],
             "problemMatcher": [],
             "windows": {
-                "command": "${env:USERPROFILE}/.pico-sdk/openocd/0.12.0+dev/openocd.exe",
+                "command": "${env:USERPROFILE}/.pico-sdk/openocd/0.12.0+dev/openocd.exe"
             }
         },
         {
             "label": "Risc-V Reset (RP2350)",
             "type": "process",
-            "command": "${userHome}/.pico-sdk/openocd/0.12.0+dev/openocd.exe",
+            "command": "${env:HOME}/.pico-sdk/openocd/0.12.0+dev/openocd",
             "args": [
                 "-s",
-                "${userHome}/.pico-sdk/openocd/0.12.0+dev/scripts",
+                "${env:HOME}/.pico-sdk/openocd/0.12.0+dev/scripts",
                 "-c",
                 "set USE_CORE { rv0 rv1 cm0 cm1 }",
                 "-f",
@@ -114,7 +121,7 @@
             ],
             "problemMatcher": [],
             "windows": {
-                "command": "${env:USERPROFILE}/.pico-sdk/openocd/0.12.0+dev/openocd.exe",
+                "command": "${env:USERPROFILE}/.pico-sdk/openocd/0.12.0+dev/openocd.exe"
             }
         }
     ]
