@@ -1,5 +1,8 @@
 # SwampSynth
-Beginning of a Juno-106 inspired monosynth for UF AES
+Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberry Pi Pico Microcontroller
+
+## Component Diagram:
+![Component Diagram](img/component_diagram.png "a title")
 
 ## Installation / Build
 
