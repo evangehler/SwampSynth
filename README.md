@@ -27,6 +27,9 @@ Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberr
 - [Architecture](#architecture)
   - [MIDI I/O (DIN & USB)](#midi-io-din--usb)
   - [DCO (Core Oscillator)](#dco-core-oscillator)
+    - [SAW](#saw)
+    - [PULSE / PWM](#pulse--pwm)
+    - [SUB OSC](#sub-osc)
   - [Power Solution](#power---12v-5v)
 - [Incomplete BOM](#incomplete-bom)
 
@@ -87,7 +90,7 @@ OSC --> Flip Flop, halves frequency
  Presently planning +/- 12V, 5V rails.
 
 ## Incomplete BOM:
-### DCO:
+
 | PART              | QTY       | NOTE              |
 | -----             | --------  | -----------       |
 | Raspberry Pi Pico | 1         | Micrcontroller    |
