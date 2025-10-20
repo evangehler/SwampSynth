@@ -1,6 +1,25 @@
 # SwampThing
 Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberry Pi Pico Microcontroller
 
+### **Project Status**
+- **Prototyped / Designed**:
+    - Saw-core DCO
+- **To be implemented**:
+    - MIDI I/O, Pulse / PWM, Blend, VCF, EG, VCA, Output
+
+## Table of Contents
+- [Component Diagram](#component-diagram)
+- [Installation / Build](#installation--build)
+  - [Prereqs](#prereqs)
+  - [Build Steps](#build-steps)
+  - [Quick Build & Flash](#quick-build--flash)
+  - [Manual Flashing](#manual-flashing)
+  - [Notes](#notes)
+- [Architecture](#architecture)
+  - [MIDI I/O (DIN & USB)](#midi-io-din--usb)
+  - [DCO (Core Oscillator)](#dco-core-oscillator)
+- [Incomplete BOM](#incomplete-bom)
+
 ## Component Diagram:
 ![Component Diagram](img/component_diagram.png "Component Diagram")
 
@@ -34,4 +53,20 @@ cmake --build .
 - Clock output: GPIO 13
 - CV output: GPIO 14
 
-### More to come!
+## Architecture
+### MIDI I/O (DIN & USB):
+*Currently In Development*
+
+### DCO (Core Oscillator):
+
+Juno-style ramp core. A TL074 op-amp integrator generates a rising ramp, NPN transistor reset discharges the timing capacitor at a rate set by the microcontroller clock. Pitch is set by the reset clock (GPIO 13). Ramp slope is set by a PWM-derived charge voltage filtered to DC (GPIO 14).
+
+~*schematic goes here*~
+
+## Incomplete BOM:
+### DCO:
+| PART              | QTY       | NOTE              |
+| -----             | --------  | -----------       |
+| Raspberry Pi Pico | 1         | Micrcontroller    |
+| TL074             | 1         | 4x Op Amp         |
+| 2N3904 NPN BJT    | 1         | Reset Transistor  |       
