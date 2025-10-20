@@ -2145,7 +2145,7 @@
 		)
 	)
 	(rectangle
-		(start 90.805 27.94)
+		(start 89.535 27.94)
 		(end 118.745 88.9)
 		(stroke
 			(width 0)
@@ -2200,7 +2200,7 @@
 		)
 		(uuid "4e7d8652-5a82-4fb0-b4ad-77bc054fc1ab")
 	)
-	(text "GPIO PWM --> Low Pass --> Charge Voltage --> Charge Current"
+	(text "Rpi GPIO PWM --> Low Pass --> Charge Voltage / Current\n"
 		(exclude_from_sim no)
 		(at 44.45 46.228 0)
 		(effects
