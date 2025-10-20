@@ -11,6 +11,9 @@ fp-info-cache
 sym-lib-table-bak
 fp-lib-table-bak
 
+# KiCad backup folders
+*-backups/
+
 # KiCad cache/libs (if you use project-specific ones, keep them)
 *.net
 *.xml
