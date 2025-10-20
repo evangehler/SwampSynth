@@ -1,7 +1,7 @@
-# SwampThing
+# **SwampThing**
 Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberry Pi Pico Microcontroller.
 
-### **Project Status**
+## **Project Status**
 | Component         | Designed  | Prototyped  | PCB / Finalized |
 | -----             | --------  | ----------- | --------------- |
 | DCO Saw-core      | X         | X           |                 |
@@ -16,8 +16,7 @@ Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberr
 | Power Solution    |           |             |                 |
 | Output            |           |             |                 |
 
-## Table of Contents
-- [Component Diagram](#component-diagram)
+# Table of Contents
 - [Installation / Build](#installation--build)
   - [Prereqs](#prereqs)
   - [Build Steps](#build-steps)
@@ -25,18 +24,16 @@ Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberr
   - [Manual Flashing](#manual-flashing)
   - [Notes](#notes)
 - [Architecture](#architecture)
-  - [MIDI I/O (DIN & USB)](#midi-din--usb)
+  - [Component Diagram](#component-diagram)
+  - [MIDI (DIN & USB)](#midi-din--usb)
   - [DCO (Core Oscillator)](#dco-core-oscillator)
     - [SAW](#saw)
     - [PULSE / PWM](#pulse--pwm)
     - [SUB OSC](#sub-osc)
-  - [Power Solution](#power---12v-5v)
+  - [Power Solution](#power-solution)
 - [Incomplete BOM](#incomplete-bom)
 
-## Component Diagram:
-![Component Diagram](img/component_diagram.png "Component Diagram")
-
-## Installation / Build
+# Installation / Build
 
 ### Prereqs
 - [VS Code](https://code.visualstudio.com/)
@@ -66,29 +63,30 @@ cmake --build .
 - Clock output: GPIO 13
 - CV output: GPIO 14
 
-## Architecture
-### MIDI (DIN & USB):
+# Architecture
+## Component Diagram:
+![Component Diagram](img/component_diagram.png "Component Diagram")
+
+## MIDI (DIN & USB):
 *Currently In Development*
 
-### DCO (Core Oscillator):
----
+## DCO (Core Oscillator):
 ![Basic DCO](img/basic_DCO.png "Basic DCO")
-#### SAW
+### SAW
 Juno-style ramp core. A TL074 op-amp integrator generates a rising ramp, NPN transistor reset discharges the timing capacitor at a rate set by the microcontroller clock. Pitch is set by the reset clock (GPIO 13). Ramp slope is set by a PWM-derived charge voltage filtered to DC (GPIO 14).
 
-#### PULSE / PWM
+### PULSE / PWM
 Saw --> Comparator, threshold = PWM
 
-#### SUB OSC
+### SUB OSC
 OSC --> Flip Flop, halves frequency
 
-### Power Solution:
----
+## Power Solution:
 *Currently In Development*
 
  Presently planning +/- 12V, 5V rails.
 
-## Incomplete BOM:
+# Incomplete BOM:
 
 | PART              | QTY       | NOTE              |
 | -----             | --------  | -----------       |
