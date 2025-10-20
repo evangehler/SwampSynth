@@ -25,7 +25,7 @@ Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberr
   - [Manual Flashing](#manual-flashing)
   - [Notes](#notes)
 - [Architecture](#architecture)
-  - [MIDI I/O (DIN & USB)](#midi-io-din--usb)
+  - [MIDI I/O (DIN & USB)](#midi-din--usb)
   - [DCO (Core Oscillator)](#dco-core-oscillator)
     - [SAW](#saw)
     - [PULSE / PWM](#pulse--pwm)
