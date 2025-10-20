@@ -1,0 +1,25 @@
+# KiCad user crap & autosaves
+*.bak
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-save.kicad_sch
+*-save.kicad_pcb
+*~*
+_autosave-*
+fp-info-cache
+sym-lib-table-bak
+fp-lib-table-bak
+
+# KiCad cache/libs (if you use project-specific ones, keep them)
+*.net
+*.xml
+*.cache.lib
+*-cache.lib
+
+# Exclude generated outputs by default (commit them only in tagged releases)
+hardware/fabrication/gerbers/**
+hardware/fabrication/bom/**
+hardware/fabrication/pickplace/**
+hardware/fabrication/plots/**
+!hardware/fabrication/.keep
