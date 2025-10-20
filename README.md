@@ -1,5 +1,5 @@
 # **SwampThing**
-Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberry Pi Pico Microcontroller.
+Beginning of a standalone Juno-106 inspired DCO monosynth for UF AES. Built around Raspberry Pi Pico Microcontroller.
 
 ## **Project Status**
 | Component         | Designed  | Prototyped  | PCB / Finalized |
@@ -34,6 +34,7 @@ Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberr
 - [Incomplete BOM](#incomplete-bom)
 
 # Installation / Build
+MIDI control, oscillator reset signals, charge voltage and envelope gates are derived from a Raspberry Pi Pico.
 
 ### Prereqs
 - [VS Code](https://code.visualstudio.com/)
