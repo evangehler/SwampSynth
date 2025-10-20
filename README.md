@@ -13,6 +13,7 @@ Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberr
 | VCF               |           |             |                 |
 | EG                |           |             |                 |
 | VCA               |           |             |                 |
+| Power Solution    |           |             |                 |
 | Output            |           |             |                 |
 
 ## Table of Contents
@@ -26,6 +27,7 @@ Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberr
 - [Architecture](#architecture)
   - [MIDI I/O (DIN & USB)](#midi-io-din--usb)
   - [DCO (Core Oscillator)](#dco-core-oscillator)
+  - [Power Solution](#power---12v-5v)
 - [Incomplete BOM](#incomplete-bom)
 
 ## Component Diagram:
@@ -62,14 +64,27 @@ cmake --build .
 - CV output: GPIO 14
 
 ## Architecture
-### MIDI I/O (DIN & USB):
+### MIDI (DIN & USB):
 *Currently In Development*
 
 ### DCO (Core Oscillator):
-
-Juno-style ramp core. A TL074 op-amp integrator generates a rising ramp, NPN transistor reset discharges the timing capacitor at a rate set by the microcontroller clock. Pitch is set by the reset clock (GPIO 13). Ramp slope is set by a PWM-derived charge voltage filtered to DC (GPIO 14).
+---
 
 *schematic goes here*
+#### SAW
+Juno-style ramp core. A TL074 op-amp integrator generates a rising ramp, NPN transistor reset discharges the timing capacitor at a rate set by the microcontroller clock. Pitch is set by the reset clock (GPIO 13). Ramp slope is set by a PWM-derived charge voltage filtered to DC (GPIO 14).
+
+#### PULSE / PWM
+Saw --> Comparator, threshold = PWM
+
+#### SUB OSC
+OSC --> Flip Flop, halves frequency
+
+### Power Solution:
+---
+*Currently In Development*
+
+ Presently planning +/- 12V, 5V rails.
 
 ## Incomplete BOM:
 ### DCO:
