@@ -1,11 +1,19 @@
 # SwampThing
-Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberry Pi Pico Microcontroller
+Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberry Pi Pico Microcontroller.
 
 ### **Project Status**
-- **Prototyped / Designed**:
-    - Saw-core DCO
-- **To be implemented**:
-    - MIDI I/O, Pulse / PWM, Blend, VCF, EG, VCA, Output
+| Component         | Designed  | Prototyped  | PCB / Finalized |
+| -----             | --------  | ----------- | --------------- |
+| DCO Saw-core      | X         | X           |                 |
+| DCO Pulse / PWM   | X         |             |                 |
+| DCO SUB           | X         |             |                 |
+| Blend             | X         |             |                 |
+| MIDI USB          |           |             |                 |
+| MIDI DIN          |           |             |                 |
+| VCF               |           |             |                 |
+| EG                |           |             |                 |
+| VCA               |           |             |                 |
+| Output            |           |             |                 |
 
 ## Table of Contents
 - [Component Diagram](#component-diagram)
@@ -61,7 +69,7 @@ cmake --build .
 
 Juno-style ramp core. A TL074 op-amp integrator generates a rising ramp, NPN transistor reset discharges the timing capacitor at a rate set by the microcontroller clock. Pitch is set by the reset clock (GPIO 13). Ramp slope is set by a PWM-derived charge voltage filtered to DC (GPIO 14).
 
-~*schematic goes here*~
+*schematic goes here*
 
 ## Incomplete BOM:
 ### DCO:
