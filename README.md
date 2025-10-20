@@ -72,8 +72,7 @@ cmake --build .
 
 ### DCO (Core Oscillator):
 ---
-
-*schematic goes here*
+![Basic DCO](img/basic_DCO.png "Basic DCO")
 #### SAW
 Juno-style ramp core. A TL074 op-amp integrator generates a rising ramp, NPN transistor reset discharges the timing capacitor at a rate set by the microcontroller clock. Pitch is set by the reset clock (GPIO 13). Ramp slope is set by a PWM-derived charge voltage filtered to DC (GPIO 14).
 
