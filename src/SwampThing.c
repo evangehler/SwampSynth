@@ -7,8 +7,8 @@
 #define CV_PIN    14
 #define SYS_CLK   125000000.0f
 
-#define MV_PER_HZ 0.00095f   // 440 Hz ≈ 560 mV
-#define CURVATURE  -0.00000005f
+#define MV_PER_HZ 0.00100f   // 440 Hz ≈ 560 mV
+#define CURVATURE  -0.000000005f
 #define V_SUPPLY  3.3f
 
 // A4 = 440 Hz reference
@@ -48,8 +48,8 @@ int main() {
     pwm_set_wrap(slice_cv, wrap_cv);
     pwm_set_enabled(slice_cv, true);
 
-    const int low_note  = 24;   // C1
-    const int high_note = 84;   // C6
+    const int low_note  = 48;   // C1
+    const int high_note = 48;   // C2
     const int note_time_ms = 100; // 0.25 s per note
 
     while (true) {

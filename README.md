@@ -5,7 +5,7 @@ Beginning of a Juno-106 inspired DCO monosynth for UF AES. Built around Raspberr
 | Component         | Designed  | Prototyped  | PCB / Finalized |
 | -----             | --------  | ----------- | --------------- |
 | DCO Saw-core      | X         | X           |                 |
-| DCO Pulse / PWM   | X         |             |                 |
+| DCO Pulse / PWM   | X         | X           |                 |
 | DCO SUB           | X         |             |                 |
 | Blend             | X         |             |                 |
 | MIDI USB          |           |             |                 |
